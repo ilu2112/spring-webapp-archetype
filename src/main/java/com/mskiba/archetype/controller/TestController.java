@@ -3,14 +3,9 @@ package com.mskiba.archetype.controller;
 
 import com.mskiba.archetype.model.User;
 import com.mskiba.archetype.service.UserService;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
+import com.mskiba.archetype.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -71,13 +66,5 @@ public class TestController {
         public void setCcc(String ccc) {
             this.ccc = ccc;
         }
-    }
-
-    public UserService getUserService() {
-        return userService;
-    }
-
-    public void setUserService(UserService userService) {
-        this.userService = userService;
     }
 }
