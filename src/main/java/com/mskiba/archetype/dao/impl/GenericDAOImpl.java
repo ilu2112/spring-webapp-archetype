@@ -1,6 +1,6 @@
 package com.mskiba.archetype.dao.impl;
 
-import com.mskiba.archetype.dao.AbstractDAO;
+import com.mskiba.archetype.dao.GenericDAO;
 import com.mskiba.archetype.model.AbstractModel;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,14 +9,14 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 
 
-public abstract class AbstractDAOImpl<T extends AbstractModel> implements AbstractDAO<T> {
+public abstract class GenericDAOImpl<T extends AbstractModel> implements GenericDAO<T> {
 
     private Class<T> type;
 
     @Autowired
     private SessionFactory sessionFactory;
 
-    public AbstractDAOImpl() {
+    public GenericDAOImpl() {
         Type t = getClass().getGenericSuperclass();
         ParameterizedType pt = (ParameterizedType) t;
         type = (Class) pt.getActualTypeArguments()[0];

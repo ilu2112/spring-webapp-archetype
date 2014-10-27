@@ -28,7 +28,7 @@ public class TestController {
         user.setUsername("mskiba");
         user.setPassword("xyz123");
         user.setEmail("text@example.com");
-        userService.saveUser(user);
+        userService.save(user);
         // tx.commit();
         // session.close();
         if (1 < 2) {
