@@ -8,6 +8,8 @@ import javax.persistence.Table;
 @Table(name = "UM_USERS")
 public class User extends AbstractModel {
 
+    private static final long serialVersionUID = -8254517593973860020L;
+
     private String username;
     private String password;
     private String email;
