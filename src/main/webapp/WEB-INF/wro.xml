@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<groups xmlns="http://www.isdc.ro/wro">
+    <group name="application">
+        <css>/assets/stylesheets/application.less</css>
+        <js>/vendor/js/jquery-1.11.1.js</js>
+        <js>/assets/js/application.coffee</js>
+    </group>
+</groups>

@@ -11,6 +11,7 @@
         <spring.version>4.1.1.RELEASE</spring.version>
         <jackson.version>2.4.3</jackson.version>
         <jdk.version>1.7</jdk.version>
+        <wro4j.version>1.7.7</wro4j.version>
     </properties>
 
     <dependencies>
@@ -107,9 +108,44 @@
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- WRO4j -->
+        <dependency>
+            <groupId>ro.isdc.wro4j</groupId>
+            <artifactId>wro4j-core</artifactId>
+            <version>${wro4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ro.isdc.wro4j</groupId>
+            <artifactId>wro4j-extensions</artifactId>
+            <version>${wro4j.version}</version>
+        </dependency>
     </dependencies>
+
 
     <build>
         <finalName>SpringWebApp</finalName>
+        <plugins>
+            <!--
+            <plugin>
+            <groupid>ro.isdc.wro4j</groupid>
+            <artifactid>wro4j-maven-plugin</artifactid>
+            <version>${wro4jversion}</version>
+            <configuration>
+                <wromanagerfactory>ro.isdc.wro.maven.plugin.manager.factory.ConfigurableWroManagerFactory</wromanagerfactory>
+                <cssdestinationfolder>${project.build.directory}/${project.build.finalName}/css/</cssdestinationfolder>
+            </configuration>
+            <executions>
+                <execution>
+                    <phase>prepare-package</phase>
+                    <goals>
+                        <goal>run</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+        -->
+        </plugins>
     </build>
 </project>

@@ -3,6 +3,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="/wro/application.css">
+    <script type="text/javascript" src="/wro/application.js"></script>
 </head>
 <body>
     <spring:message code="welcome" text="Welcome text" />
