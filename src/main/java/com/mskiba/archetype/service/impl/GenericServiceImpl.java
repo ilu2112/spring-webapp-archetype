@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 public abstract class GenericServiceImpl<T extends AbstractModel> implements GenericService<T> {
 
     @Transactional
-    public T getById(int id) {
+    public T getById(Long id) {
         return getBaseDAO().getById(id);
     }
 

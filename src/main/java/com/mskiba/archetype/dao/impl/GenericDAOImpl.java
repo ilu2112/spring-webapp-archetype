@@ -23,7 +23,7 @@ public abstract class GenericDAOImpl<T extends AbstractModel> implements Generic
     }
 
     @Override
-    public T getById(int id) {
+    public T getById(Long id) {
         return (T) sessionFactory.getCurrentSession().get(type, id);
     }
 

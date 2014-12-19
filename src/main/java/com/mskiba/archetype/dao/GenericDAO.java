@@ -4,7 +4,7 @@ import com.mskiba.archetype.model.AbstractModel;
 
 
 public interface GenericDAO<T extends AbstractModel> {
-    T getById(int id);
+    T getById(Long id);
 
     void save(T entity);
 

@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 public interface GenericService<T extends AbstractModel> {
     GenericDAO<T> getBaseDAO();
 
-    T getById(int id);
+    T getById(Long id);
 
     void save(T entity);
 
