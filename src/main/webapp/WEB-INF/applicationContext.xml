@@ -50,4 +50,15 @@
         <property name="defaultLocale" value="en" />
     </bean>
     <!-- / I18N -->
+
+
+    <!-- WRO -->
+    <bean id="wroFilter" class="ro.isdc.wro.http.ConfigurableWroFilter">
+        <property name="properties" ref="wroProperties"/>
+    </bean>
+
+    <bean id="wroProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="location" value="classpath:wro.properties" />
+    </bean>
+    <!-- / WRO -->
 </beans>

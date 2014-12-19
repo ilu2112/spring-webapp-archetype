@@ -25,4 +25,7 @@
             <property name="paramName" value="lang" />
         </bean>
     </mvc:interceptors>
+
+    <mvc:resources mapping="/assets/**" location="/assets/" />
+    <mvc:resources mapping="/vendor/**" location="/vendor/" />
 </beans>
